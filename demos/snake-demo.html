@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка - Демонстрация</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(45deg, #8b5cf6, #6d28d9);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            color: #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(139, 92, 246, 0.2);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(45deg, #8b5cf6, #6d28d9);
+            color: white;
+        }
+
+        h1 {
+            color: #8b5cf6;
+            text-align: center;
+            margin: 0;
+        }
+
+        .demo-section {
+            margin-bottom: 2rem;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 1rem auto;
+            display: none;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .screenshot.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .gallery {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+
+        .gallery-btn {
+            background: rgba(139, 92, 246, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .gallery-btn:hover {
+            background: rgba(139, 92, 246, 1);
+            transform: scale(1.1);
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(139, 92, 246, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot.active {
+            background: rgba(139, 92, 246, 1);
+            transform: scale(1.2);
+        }
+
+        .features {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .features h2 {
+            color: #8b5cf6;
+            margin-top: 0;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "•";
+            color: #8b5cf6;
+            position: absolute;
+            left: 0;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #8b5cf6, #6d28d9);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .requirements {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                <span data-lang data-key="back">Назад</span>
+            </a>
+            <h1 data-lang data-key="snake-title">Змейка - Демонстрация</h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <div class="gallery">
+                <img src="images/snake-screenshot.png" alt="Скриншот игры Змейка - Главное меню" class="screenshot active" data-index="0">
+                <img src="images/snake-gameplay.png" alt="Скриншот игры Змейка - Игровое поле" class="screenshot" data-index="1">
+                <img src="images/snake-settings.png" alt="Скриншот игры Змейка - Настройки" class="screenshot" data-index="2">
+                <img src="images/snake-lose.png" alt="Скриншот игры Змейка - Проигрыш" class="screenshot" data-index="3">
+                <img src="images/snake-win.png" alt="Скриншот игры Змейка - Победа" class="screenshot" data-index="4">
+                
+                <div class="gallery-nav">
+                    <button class="gallery-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="gallery-dots">
+                    <button class="gallery-dot active" data-index="0"></button>
+                    <button class="gallery-dot" data-index="1"></button>
+                    <button class="gallery-dot" data-index="2"></button>
+                    <button class="gallery-dot" data-index="3"></button>
+                    <button class="gallery-dot" data-index="4"></button>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2 data-lang data-key="features-title">Особенности приложения:</h2>
+                <ul>
+                    <li data-lang data-key="feature-1">Классическая механика игры змейка</li>
+                    <li data-lang data-key="feature-2">Система подсчета очков</li>
+                    <li data-lang data-key="feature-3">Увеличение скорости с ростом змейки</li>
+                    <li data-lang data-key="feature-4">Случайное появление еды</li>
+                    <li data-lang data-key="feature-5">Отслеживание рекордов</li>
+                    <li data-lang data-key="feature-6">Звуковые эффекты</li>
+                </ul>
+            </div>
+
+            <div class="requirements">
+                <h2 data-lang data-key="requirements-title">Системные требования:</h2>
+                <ul>
+                    <li data-lang data-key="req-1">Python 3.7 или выше</li>
+                    <li data-lang data-key="req-2">Pygame библиотека</li>
+                    <li data-lang data-key="req-3">Минимум 512MB RAM</li>
+                    <li data-lang data-key="req-4">Любая операционная система с поддержкой Python</li>
+                </ul>
+            </div>
+
+            <div class="download-section">
+                <a href="downloads/snake-game.exe" class="download-btn" data-lang data-key="download-btn">Скачать игру</a>
+            </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.querySelector('.gallery');
+            const screenshots = gallery.querySelectorAll('.screenshot');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const prevBtn = gallery.querySelector('.prev-btn');
+            const nextBtn = gallery.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                screenshots.forEach(img => img.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                currentIndex = (index + screenshots.length) % screenshots.length;
+                screenshots[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }
+
+            // Обработчики для кнопок
+            prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
+            nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
+
+            // Обработчики для точек
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = parseInt(dot.dataset.index);
+                    showImage(index);
+                });
+            });
+
+            // Автоматическое переключение каждые 5 секунд
+            setInterval(() => showImage(currentIndex + 1), 5000);
+        });
+    </script>
+</body>
+</html> 

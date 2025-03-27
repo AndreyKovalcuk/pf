@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#about" data-lang data-key="about">Обо мне</a>
+                <a href="#projects" data-lang data-key="projects">Проекты</a>
+                <a href="#contact" data-lang data-key="contact">Контакты</a>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 data-lang data-key="portfolio-title">Мое Портфолио</h1>
+        <p data-lang data-key="portfolio-subtitle">Веб-разработчик | Программист</p>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <div class="about-content">
+            <img src="photo_2025-03-26_14-48-41.jpg" alt="Мое фото" class="profile-image">
+            <div class="about-text">
+                <p data-lang data-key="about-text">Привет! Я веб-разработчик с опытом работы в C#. 
+                   Создаю современные веб-приложения и десктопные программы, 
+                   используя передовые технологии и лучшие практики разработки.</p>
+                <div class="skills">
+                    <h3 data-lang data-key="skills-title">Мои навыки:</h3>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fab fa-microsoft"></i>
+                            <span>C# и .NET Framework</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5 и CSS3</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>SQL и базы данных</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git и система контроля версий</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Мои проекты</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-gamepad fa-4x"></i>
+                </div>
+                <div class="project-lang">
+                    <i class="fab fa-python" title="Python"></i>
+                </div>
+                <h3 data-lang data-key="snake-game">Игра "Змейка"</h3>
+                <p data-lang data-key="snake-description">Классическая игра змейка, разработанная на Python с использованием библиотеки Pygame. Включает систему счета и увеличение сложности.</p>
+                <div class="project-links">
+                    <a href="demos/snake-demo.html" class="btn">
+                        <i class="fas fa-play"></i>
+                        <span data-lang data-key="demo">Демо</span>
+                    </a>
+                    <a href="https://github.com/AndreyKovalcuk/snake-game" class="btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span data-lang data-key="code">Код</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-calculator fa-4x"></i>
+                </div>
+                <div class="project-lang">
+                    <i class="fab fa-windows" title="C#"></i>
+                </div>
+                <h3 data-lang data-key="calculator">Калькулятор на C#</h3>
+                <p data-lang data-key="calculator-description">Многофункциональный калькулятор с современным интерфейсом, разработанный на C# с использованием Windows Forms.</p>
+                <div class="project-links">
+                    <a href="demos/calculator-demo.html" class="btn">
+                        <i class="fas fa-play"></i>
+                        <span data-lang data-key="demo">Демо</span>
+                    </a>
+                    <a href="https://github.com/AndreyKovalcuk/calculator" class="btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span data-lang data-key="code">Код</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-exchange-alt fa-4x"></i>
+                </div>
+                <div class="project-lang">
+                    <i class="fab fa-windows" title="C#"></i>
+                </div>
+                <h3 data-lang data-key="converter">Конвертер валют</h3>
+                <p data-lang data-key="converter-description">Приложение для конвертации валют с актуальными курсами, разработанное на C# с использованием API для получения курсов валют.</p>
+                <div class="project-links">
+                    <a href="demos/converter-demo.html" class="btn">
+                        <i class="fas fa-play"></i>
+                        <span data-lang data-key="demo">Демо</span>
+                    </a>
+                    <a href="https://github.com/AndreyKovalcuk/currency-converter" class="btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span data-lang data-key="code">Код</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <h2 data-lang data-key="contact-title">Связаться со мной</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name" data-lang data-key="name-label">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" data-lang data-key="message-label">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" data-lang data-key="send-button">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Мое Портфолио. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
