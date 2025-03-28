@@ -6,10 +6,9 @@ const translations = {
         'contact': 'Контакты',
         'portfolio-title': 'Мое Портфолио',
         'portfolio-subtitle': 'Веб-разработчик | Программист',
+        'projects-note': '* Список проектов будет пополняться новыми работами',
         'about-text': 'Привет! Я веб-разработчик с опытом работы в C#. Создаю современные веб-приложения и десктопные программы, используя передовые технологии и лучшие практики разработки.',
         'skills-title': 'Мои навыки:',
-        'snake-game': 'Игра "Змейка"',
-        'snake-description': 'Классическая игра змейка, разработанная на Python с использованием библиотеки Pygame. Включает систему счета и увеличение сложности.',
         'calculator': 'Калькулятор на C#',
         'calculator-description': 'Многофункциональный калькулятор с современным интерфейсом, разработанный на C# с использованием Windows Forms.',
         'converter': 'Конвертер валют',
@@ -24,7 +23,6 @@ const translations = {
         'back': 'Назад',
         'converter-title': 'Конвертер валют - Демонстрация',
         'calculator-title': 'Калькулятор - Демонстрация',
-        'snake-title': 'Змейка - Демонстрация',
         'features-title': 'Особенности приложения:',
         'requirements-title': 'Системные требования:',
         'feature-1': 'Актуальные курсы валют через API',
@@ -46,17 +44,6 @@ const translations = {
         'calc-feature-4': 'История вычислений',
         'calc-feature-5': 'Поддержка клавиатурного ввода',
         'calc-feature-6': 'Копирование результата в буфер обмена',
-        // Переводы для змейки
-        'snake-feature-1': 'Классическая механика игры змейка',
-        'snake-feature-2': 'Система подсчета очков',
-        'snake-feature-3': 'Увеличение скорости с ростом змейки',
-        'snake-feature-4': 'Случайное появление еды',
-        'snake-feature-5': 'Отслеживание рекордов',
-        'snake-feature-6': 'Звуковые эффекты',
-        'snake-req-1': 'Python 3.7 или выше',
-        'snake-req-2': 'Pygame библиотека',
-        'snake-req-3': 'Минимум 512MB RAM',
-        'snake-req-4': 'Любая операционная система с поддержкой Python',
         'github': 'GitHub'
     },
     en: {
@@ -65,10 +52,9 @@ const translations = {
         'contact': 'Contact',
         'portfolio-title': 'My Portfolio',
         'portfolio-subtitle': 'Web Developer | Programmer',
+        'projects-note': '* Project list will be updated with new works',
         'about-text': 'Hi! I\'m a web developer with experience in C#. I create modern web applications and desktop programs using cutting-edge technologies and best development practices.',
         'skills-title': 'My Skills:',
-        'snake-game': 'Snake Game',
-        'snake-description': 'A classic snake game developed in Python using the Pygame library. Includes scoring system and increasing difficulty.',
         'calculator': 'C# Calculator',
         'calculator-description': 'A multifunctional calculator with a modern interface, developed in C# using Windows Forms.',
         'converter': 'Currency Converter',
@@ -83,7 +69,6 @@ const translations = {
         'back': 'Back',
         'converter-title': 'Currency Converter - Demo',
         'calculator-title': 'Calculator - Demo',
-        'snake-title': 'Snake Game - Demo',
         'features-title': 'Application Features:',
         'requirements-title': 'System Requirements:',
         'feature-1': 'Real-time exchange rates via API',
@@ -105,17 +90,6 @@ const translations = {
         'calc-feature-4': 'Calculation history',
         'calc-feature-5': 'Keyboard input support',
         'calc-feature-6': 'Copy result to clipboard',
-        // Переводы для змейки
-        'snake-feature-1': 'Classic snake game mechanics',
-        'snake-feature-2': 'Score tracking system',
-        'snake-feature-3': 'Speed increase as snake grows',
-        'snake-feature-4': 'Random food appearance',
-        'snake-feature-5': 'High score tracking',
-        'snake-feature-6': 'Sound effects',
-        'snake-req-1': 'Python 3.7 or higher',
-        'snake-req-2': 'Pygame library',
-        'snake-req-3': 'Minimum 512MB RAM',
-        'snake-req-4': 'Any operating system with Python support',
         'github': 'GitHub'
     }
 };
@@ -172,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.textContent = 'Отправка...';
 
         fetch(form.action, {
-            method: 'POST',
+                method: 'POST',
             body: new FormData(form),
-            headers: {
+                headers: {
                 'Accept': 'application/json'
             }
         })

@@ -460,3 +460,14 @@ footer {
         margin: 2rem;
     }
 }
+
+.projects-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+.projects-note p {
+    font-size: 0.9rem;
+}
