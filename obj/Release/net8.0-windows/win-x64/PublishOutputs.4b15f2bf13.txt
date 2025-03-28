@@ -1,0 +1,2 @@
+D:\work\convert\bin\Release\net8.0-windows\win-x64\publish\CurrencyConverter.pdb
+D:\work\convert\bin\Release\net8.0-windows\win-x64\publish\CurrencyConverter.exe
