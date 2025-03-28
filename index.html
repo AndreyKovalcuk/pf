@@ -138,7 +138,13 @@
 
     <section id="contact" class="contact-form">
         <h2 data-lang data-key="contact-title">Связаться со мной</h2>
-        <form id="contactForm">
+        <form action="https://formspree.io/f/mzzeadva" method="POST" id="contactForm">
+            <!-- Защита от спама -->
+            <input type="hidden" name="_subject" value="Новое сообщение с портфолио">
+            <input type="text" name="_gotcha" style="display:none">
+            <!-- URL для перенаправления после отправки -->
+            <input type="hidden" name="_next" value="https://andreykovalcuk.github.io/thank-you.html">
+            
             <div class="form-group">
                 <label for="name" data-lang data-key="name-label">Ваше имя:</label>
                 <input type="text" id="name" name="name" required>
@@ -157,10 +163,9 @@
 
     <footer>
         <div class="social-links">
-            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
-            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/AndreyKovalcuk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/p4ndamxne" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="mailto:andreykovalcuk@yandex.ru" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p>&copy; 2024 Мое Портфолио. Все права защищены.</p>
     </footer>

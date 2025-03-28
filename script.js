@@ -158,37 +158,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Обработка формы обратной связи
+    // Обработка отправки формы
     const contactForm = document.getElementById('contactForm');
     
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
         
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
+        const form = event.target;
+        const submitButton = form.querySelector('button[type="submit"]');
         
-        fetch('http://localhost:3000/send-email', {
+        // Блокируем кнопку на время отправки
+        submitButton.disabled = true;
+        submitButton.textContent = 'Отправка...';
+
+        fetch(form.action, {
             method: 'POST',
+            body: new FormData(form),
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
+                'Accept': 'application/json'
+            }
         })
         .then(response => response.json())
         .then(data => {
-            if (data.message) {
-                showNotification('Спасибо! Ваше сообщение отправлено.');
-                document.getElementById('contactForm').reset();
+            if (data.ok) {
+                showNotification('Спасибо! Ваше сообщение отправлено.', 'success');
+                form.reset();
             } else {
-                showNotification('Ошибка при отправке сообщения', 'error');
+                throw new Error('Ошибка при отправке сообщения');
             }
         })
         .catch(error => {
-            console.error('Ошибка:', error);
-            showNotification('Произошла ошибка при отправке сообщения', 'error');
+            showNotification('Произошла ошибка при отправке. Пожалуйста, попробуйте позже.', 'error');
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Отправить';
         });
     });
     
