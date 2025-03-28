@@ -34,6 +34,12 @@ Total Lines of Code: 4,291
 
 ## Getting Started
 
+### Quick Start
+1. Visit the portfolio website to see live demos:
+   - Web Interface: https://andreykovalcuk.github.io/pf
+   - Try out the online calculator and currency converter
+   - View project documentation and screenshots
+
 ### Prerequisites
 - .NET 8.0 SDK
 - Node.js
