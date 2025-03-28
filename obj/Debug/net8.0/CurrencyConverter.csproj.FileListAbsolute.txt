@@ -1,0 +1,17 @@
+D:\work\convert\bin\Debug\net8.0\CurrencyConverter.exe
+D:\work\convert\bin\Debug\net8.0\CurrencyConverter.deps.json
+D:\work\convert\bin\Debug\net8.0\CurrencyConverter.runtimeconfig.json
+D:\work\convert\bin\Debug\net8.0\CurrencyConverter.dll
+D:\work\convert\bin\Debug\net8.0\CurrencyConverter.pdb
+D:\work\convert\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.csproj.AssemblyReference.cache
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.AssemblyInfoInputs.cache
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.AssemblyInfo.cs
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.csproj.CoreCompileInputs.cache
+D:\work\convert\obj\Debug\net8.0\Currency.08E530D3.Up2Date
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.dll
+D:\work\convert\obj\Debug\net8.0\refint\CurrencyConverter.dll
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.pdb
+D:\work\convert\obj\Debug\net8.0\CurrencyConverter.genruntimeconfig.cache
+D:\work\convert\obj\Debug\net8.0\ref\CurrencyConverter.dll

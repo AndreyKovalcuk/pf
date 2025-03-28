@@ -1,0 +1,17 @@
+D:\work\convert\bin\Release\net8.0-windows\win-x64\CurrencyConverter.exe
+D:\work\convert\bin\Release\net8.0-windows\win-x64\CurrencyConverter.deps.json
+D:\work\convert\bin\Release\net8.0-windows\win-x64\CurrencyConverter.runtimeconfig.json
+D:\work\convert\bin\Release\net8.0-windows\win-x64\CurrencyConverter.dll
+D:\work\convert\bin\Release\net8.0-windows\win-x64\CurrencyConverter.pdb
+D:\work\convert\bin\Release\net8.0-windows\win-x64\Newtonsoft.Json.dll
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.csproj.AssemblyReference.cache
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.AssemblyInfoInputs.cache
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.AssemblyInfo.cs
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.csproj.CoreCompileInputs.cache
+D:\work\convert\obj\Release\net8.0-windows\win-x64\Currency.08E530D3.Up2Date
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.dll
+D:\work\convert\obj\Release\net8.0-windows\win-x64\refint\CurrencyConverter.dll
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.pdb
+D:\work\convert\obj\Release\net8.0-windows\win-x64\CurrencyConverter.genruntimeconfig.cache
+D:\work\convert\obj\Release\net8.0-windows\win-x64\ref\CurrencyConverter.dll
