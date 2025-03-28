@@ -1,0 +1,8 @@
+# Игнорировать папки с проектами
+snake-game/
+calculator/
+currency-converter/
+
+# Системные файлы
+.DS_Store
+Thumbs.db 
